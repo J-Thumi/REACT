@@ -1,0 +1,190 @@
+components describe a part of the user interface
+they can be nested and are reusable
+are buildind blocks of every react app
+there are several components i.e header, main content, side nav, footer and component having other components
+components can be stateful class components or stateless functional components
+stateful class components have render methods
+
+
+FUNCTIONAL COMPONENTS
+functional components are just js functions that accepts properties and returns html
+
+create a component with js extension 
+in it:
+
+import React from 'react'
+
+define  a function mostly use arow functions
+export it : export default function-name
+then import in the app.js : import function-name from full-path
+the full path example : './component/greet'
+the above means component is a folder in the same folder as the app.js and greet is a file in the component folder
+in the return part of the app call the imported function as a html tag or a self closing tag i.e <Greet></Greet> or <Greet/>
+
+export const Greet=()=> <h1>Hello user</h1>
+if you export like this import as shown below
+import {Greet}  from './components/greet'
+
+if you export: export default Greet 
+you can use any name in the import
+import mycomp from path
+but in the return use same name in import
+
+
+CLASS COMPONENTS
+typically ES6 classes
+in the component import 2 things
+import React  , {Component} from 'react'
+define a class that extends from Components:
+class welcome extends Component{
+    render(){
+        return <h1></h1>
+    }
+}
+export default welcome 
+then import in the app.js : import function-name from full-path
+the full path example : './component/welcome'
+the above means component is a folder in the same folder as the app.js and greet is a file in the component folder
+in the return part of the app call the imported function as a html tag or a self closing tag i.e <welcome></welcome> or <welcome/>
+
+
+functional are used mostly
+lack this keyword
+mainly responsible for UI
+provide lifecycle hooks
+
+class Components 
+maintain their own private data-statefulcomplex UI logic
+provide lifecycle hooks
+
+
+not regular html is returned but jsx
+JSX
+JAVASCRIPT XML makes react code simpler and elegant
+if the jsx is taking multiple lines use ()
+example:
+return (
+    <div className="App">
+      <h1>REACT</h1>
+< Greet namee='jose' hero='captain America'/>
+ </div>);
+ there must be only one wrapper tag in jsx i.e div in above 
+
+ if its a single line no need
+
+you can return regular html instead of jsx
+in the return of the function in the component
+
+
+
+return React.createElement('div',{id:'hello'},React.createElement('h1',{id:'not jsx'},'this is not jsx'))
+example:
+import React from 'react'
+
+const Name=()=>{
+    return React.createElement('div',{id:'hello'},React.createElement('h1',{id:'notjsx'},'this is not jsx'))
+}
+
+export default Name
+
+PROPS 
+it is short for properties
+
+components are reusable this means we can call the imported function in the return of app.js a many times a we want
+this returns the same output several times we can change the output 
+give each call of the imported an attribute of what you want to change example
+< Greet namee='jose'/>
+< Greet namee='jane'/>
+< Greet namee='john'/>
+in the Greet function have a props parameter
+and where you want the changes to appear write {props.namee}
+example:
+const Greet=(props)=>{
+
+ return <h1>hello {props.namee}</h1>
+}
+
+
+CHILDREN PROPS
+< Greet namee='jose' hero='captain America'>this is children prop</Greet>
+< Greet namee='jane' hero='superman'><button>press</button></Greet>
+< Greet namee='john' hero='batman'/>
+this is children prop STATEMENT is a children prop and it only appears after jose
+you can add any tags there example as in second Greet where there is a button
+if we want to include a child prop we must include {prop.children} in the function of the component
+if the jsx is taking multiple lines use ()
+example:
+const Greet=(props)=>{
+
+    return (
+        <div>
+    <h1>hello {props.namee} you are {props.hero}</h1>
+
+    {props.children}
+    </div>
+    )
+    
+   }
+ there must be only one wrapper tag in jsx i.e div in above 
+
+ in functional components we had props a the parameter but in class components we use this keyword
+ example:
+  return <h1>Class component hello {this.props.namee} you are {this.props.hero}</h1>
+
+  props are immutable
+
+  STATE
+ in the class make a constructor in it make a super method and what to appear assign it to this.state
+ constructor(){
+        super()
+        this.state={
+            message:'welcome'
+        }
+    }
+then in the return of render call it in jsx
+ render(){
+        return (
+        <h1>{this.state.message}</h1>
+    )
+    }
+the message can be change with a click of a button
+add a button in the returnof the render
+add an onClick attribute to it and assign it the method to be executed
+
+ changemsg(){
+        this.setState({message:'Thank you for subscribing'})
+    }
+
+    render(){
+        return (
+            <div>
+<h1>{this.state.message}</h1>
+<button onClick={()=> this.changemsg()}>suscribe</button>
+            </div>
+        
+    )
+    }
+
+  PROPS AND STATE both affect UI in broser
+  props are passed to the component state is managed within the component
+  props are parameters in the function state variables are def in function body
+  props are immutable state can be changed
+  in function props is the parameter and state we use useState Hook
+  in class this.props is used and state this.state is used
+
+we can autofill the class components by typing rcc in the code field
+we can autofill the function components by typing rfc in the code field
+
+  SUMMARY
+  create a component
+  decide if you want it to be functional or class
+  import React from 'react' if functional
+  import React , {Component} from 'react' if class
+  define a function in functional and dont forget the return if multiple lines in return include return()
+  define a class if class component   that extends Component also remember render(){return}
+
+
+we can autofill the class components by typing rcc in the code field
+we can autofill the function components by typing rfc in the code field
+provided ES7 extension is downloaded
+here export is at the function and class def so we can edit it and export end of the file using export default function name
