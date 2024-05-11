@@ -4,6 +4,8 @@ import Greet  from './components/greet'
 import Welcome from './components/welcome'
 import Name from './components/notjsx'
 import Message from './components/Msg'
+import Count from './count'
+
 function App() {
   return (
     <div className="App">
@@ -17,7 +19,7 @@ function App() {
 < Welcome namee='jane' hero='superman'><button>press</button></Welcome>
 <Name /> 
 <Message/>
-
+<Count/>
     </div>
   );
 }

@@ -148,8 +148,8 @@ then in the return of render call it in jsx
     )
     }
 the message can be change with a click of a button
-add a button in the returnof the render
-add an onClick attribute to it and assign it the method to be executed
+add a button in the return of the render
+add an onClick attribute to it and assign it the method to be executed remember this.method name
 
  changemsg(){
         this.setState({message:'Thank you for subscribing'})
@@ -164,6 +164,9 @@ add an onClick attribute to it and assign it the method to be executed
         
     )
     }
+
+in the method to change the html this.setState({}) is used 
+
 
   PROPS AND STATE both affect UI in broser
   props are passed to the component state is managed within the component
@@ -186,5 +189,48 @@ we can autofill the function components by typing rfc in the code field
 
 we can autofill the class components by typing rcc in the code field
 we can autofill the function components by typing rfc in the code field
+to auto fill the constructor part use rconst
 provided ES7 extension is downloaded
-here export is at the function and class def so we can edit it and export end of the file using export default function name
+here export is at the function and class def so we can edit it and export end of the file using export default function name  
+
+
+import React, { Component } from 'react'
+
+class count extends Component {
+
+    constructor(props) {
+      super(props)
+    
+      this.state = {
+         count:0
+      }
+    }
+    increment(){
+        
+        this.setState({ count:this.state.count+1 })
+    }
+  render() {
+    return (
+      <div>
+        count-{this.state.count}
+
+        <div><button onClick={()=> this.increment()}>increase</button></div>
+      </div>
+    )
+  }
+}
+
+
+export default count
+
+
+setState can take 2 parameters an object and call back function
+
+in the method called onClick 
+this.setState({
+    count:this.state.count + 1
+}, ()=>{
+    console.log("call back value", this.state.count)
+})
+
+if you want to execute code after state has changed place it in the second parameter of setState not after it
