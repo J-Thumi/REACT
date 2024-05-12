@@ -185,8 +185,7 @@ we can autofill the function components by typing rfc in the code field
   import React , {Component} from 'react' if class
   define a function in functional and dont forget the return if multiple lines in return include return()
   define a class if class component   that extends Component also remember render(){return}
-
-
+any JAVASCRIPT inside html should be in {}
 we can autofill the class components by typing rcc in the code field
 we can autofill the function components by typing rfc in the code field
 to auto fill the constructor part use rconst
