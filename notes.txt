@@ -175,8 +175,8 @@ in the method to change the html this.setState({}) is used
   in function props is the parameter and state we use useState Hook
   in class this.props is used and state this.state is used
 
-we can autofill the class components by typing rcc in the code field
-we can autofill the function components by typing rfc in the code field
+we can autofill the class components by typing rcc in the code field rfe also works
+we can autofill the function components by typing rfc in the code field  rfce also works
 
   SUMMARY
   create a component
@@ -233,3 +233,25 @@ this.setState({
 })
 
 if you want to execute code after state has changed place it in the second parameter of setState not after it
+
+
+PROPS DESTRUCTURING
+can be in the function parameters instead of (props) then {props.name} in return 
+we can just have ({name}) in parameters and {name} in return
+We can also  
+const {name,hero} = props if props is passed as a parameter
+this are in functiona components
+
+for class components destructur in the render method
+const {name,hero} = this.props
+
+
+EVENT HANDLING 
+we name them using camel case i.e start small letter and any word in the main word starts with upper case
+e.g onClick
+when giving objects e.g button event to listen to assign the event to be listened to a js function meaning it must be in {}
+either pre defined or def it there
+note this it not a function call meaning no need of () after the function name
+above is for function components
+
+For class components:

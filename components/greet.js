@@ -5,10 +5,10 @@ import React from 'react'
 // }
 
 const Greet=(props)=>{
-
+const {namee,hero}=props
     return (
         <div>
-    <h1>hello {props.namee} you are {props.hero}</h1>
+    <h1>hello {namee} you are {hero}</h1>
 
     {props.children}
     </div>
