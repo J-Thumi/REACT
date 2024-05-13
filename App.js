@@ -10,6 +10,9 @@ import ClassClick from './classClick';
 import Bind from './components/Bind';
 import PassArray from './components/PassArray';
 import Fruits from './components/Fruits';
+import Conditional from './components/conditional';
+import Aprove from './aprove';
+
 
 function App() {
 
@@ -32,10 +35,12 @@ function App() {
 <Message/>
 <Count/>
 <Click/>
-<ClassClick/> */}
+<ClassClick/>
 <Bind/>
-<PassArray like='coding' Person={Person}/>
+<PassArray like='coding' Person={Person}/> */}
 <Fruits/>
+<Conditional />
+<Aprove/>
     </div>
   );
 }

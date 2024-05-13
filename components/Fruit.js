@@ -1,10 +1,10 @@
 import React from 'react'
 
-function Fruit({namee,price,size}) {
+function Fruit({namee,price,size,soldout}) {
    
   return (
     <li >
-      {namee} {price} {size}
+      {namee} {price} {size}{soldout? " soldout":" "}
     </li>
   )
 }
