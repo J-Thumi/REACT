@@ -8,7 +8,16 @@ import Count from './count'
 import Click from './components/Click'
 import ClassClick from './classClick';
 import Bind from './components/Bind';
+import PassArray from './components/PassArray';
+import Fruits from './components/Fruits';
+
 function App() {
+
+  const Person={
+    birth:1987,
+    place:'Othaya',
+    county:"Nyeri",
+  }
   return (
     <div className="App">
       <h1>REACT</h1>
@@ -25,6 +34,8 @@ function App() {
 <Click/>
 <ClassClick/> */}
 <Bind/>
+<PassArray like='coding' Person={Person}/>
+<Fruits/>
     </div>
   );
 }
