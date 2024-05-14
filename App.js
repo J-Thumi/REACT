@@ -12,7 +12,7 @@ import PassArray from './components/PassArray';
 import Fruits from './components/Fruits';
 import Conditional from './components/conditional';
 import Aprove from './aprove';
-
+import Workers from './components/Workers';
 
 function App() {
 
@@ -41,6 +41,7 @@ function App() {
 <Fruits/>
 <Conditional />
 <Aprove/>
+<Workers/>
     </div>
   );
 }

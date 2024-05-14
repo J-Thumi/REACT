@@ -255,3 +255,14 @@ note this it not a function call meaning no need of () after the function name
 above is for function components
 
 For class components:
+
+
+
+
+
+
+arrays [] objects {}
+we can have an array of objects
+
+you can also render components conditionaly
+

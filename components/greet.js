@@ -5,7 +5,8 @@ import React from 'react'
 // }
 
 const Greet=(props)=>{
-const {namee,hero}=props
+const {namee,hero}=props//destructuring
+
     return (
         <div>
     <h1>hello {namee} you are {hero}</h1>

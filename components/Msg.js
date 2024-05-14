@@ -17,6 +17,7 @@ class Message extends Component{
             <div>
 <h1>{this.state.message}</h1>
 <button onClick={()=> this.changemsg()}>suscribe</button>
+{/* events use camel case */}
             </div>
         
     )
