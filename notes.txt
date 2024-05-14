@@ -266,3 +266,18 @@ we can have an array of objects
 
 you can also render components conditionaly
 
+
+
+
+data in props is immutable hence cant change dynamically
+
+
+HOOKS
+can only be used in functional components
+Functionality: Hooks provide a way to use state and other React features without relying on class components. They let you manage component state, perform side effects, and access context directly within functional components.
+Benefits: Hooks improve code organization, promote reusability, and make functional components more powerful for managing complex UI logic.
+they are executed in order placed hence no if ,loop,functions
+
+useState
+const [current,setCurrent]=useState(initial)
+eg const [current,setCurrent]=useState(0)

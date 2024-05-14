@@ -13,7 +13,7 @@ import Fruits from './components/Fruits';
 import Conditional from './components/conditional';
 import Aprove from './aprove';
 import Workers from './components/Workers';
-
+import UseState from './Hooks/useState';
 function App() {
 
   const Person={
@@ -37,11 +37,12 @@ function App() {
 <Click/>
 <ClassClick/>
 <Bind/>
-<PassArray like='coding' Person={Person}/> */}
+<PassArray like='coding' Person={Person}/>
 <Fruits/>
 <Conditional />
 <Aprove/>
-<Workers/>
+<Workers/> */}
+<UseState/>
     </div>
   );
 }
