@@ -14,6 +14,7 @@ import Conditional from './components/conditional';
 import Aprove from './aprove';
 import Workers from './components/Workers';
 import UseState from './Hooks/useState';
+import UseEffect from './Hooks/useEffect';
 function App() {
 
   const Person={
@@ -43,6 +44,7 @@ function App() {
 <Aprove/>
 <Workers/> */}
 <UseState/>
+<UseEffect/>
     </div>
   );
 }

@@ -281,3 +281,6 @@ they are executed in order placed hence no if ,loop,functions
 useState
 const [current,setCurrent]=useState(initial)
 eg const [current,setCurrent]=useState(0)
+
+useEffect
+useEffect(function that returns what to be done after a change,[array of what changes])

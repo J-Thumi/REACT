@@ -2,19 +2,30 @@ import React ,{ useState } from 'react'
 
 function App() {
 
-    const [current,setCurrent] = useState(6)
+
+
+    const [state,setState] = useState({count:6,theme:"blue"})
+    const count=state.count
+    const theme=state.theme
+
 
     const decrease=()=>{
-        setCurrent((previous)=>previous-1)
+       setState((prevstate)=>{ 
+        return {...prevstate, count:prevstate.count-1}
+    })
+       
     }
     const increase=()=>{
-        setCurrent((previous)=>previous+1)
+        setState((prevstate)=>{ 
+            return {...prevstate, count:prevstate.count+1}
+        })
     }
 
   return (
     <div>
       <button onClick={decrease}>-</button>
-      <span>{current}</span>
+      <span>{count}</span>
+      <span>{theme}</span>
       <button onClick={increase}>+</button>
     </div>
   )
