@@ -283,6 +283,8 @@ const [current,setCurrent]=useState(initial)
 eg const [current,setCurrent]=useState(0)
 the setCurrent will be called in a fuction to be assigned to the onClick of a button
 on calling the setCurrent fuction you pass the following state
+you must import
+import React ,{ useState } from 'react'
 
 useEffect
 useEffect(function that returns what to be done after a change,[array of what changes])
@@ -299,3 +301,21 @@ function message(){
 const Jack={face:"<>"}
 const Show=message.bind(Jack)
 console.log(show())
+
+
+Inputs and forms
+are not handled the same as in html
+input tags have onChange attribute
+the onChange attribute must be assigned a function (arrow functions)
+the function takes an event parameter and returns the setName function with an event parameter
+the setName function was an element in the array that useState was assigned to 
+in def the array you must use const keyword
+
+SPREAD OPERATOR
+appends old to new arrays and objects
+ const num=[6,6,7,9,4,3]
+    const bers=[1,2,3,5]
+    const numbers=[...num,...bers]
+    console.log(numbers)
+
+    
