@@ -281,6 +281,21 @@ they are executed in order placed hence no if ,loop,functions
 useState
 const [current,setCurrent]=useState(initial)
 eg const [current,setCurrent]=useState(0)
+the setCurrent will be called in a fuction to be assigned to the onClick of a button
+on calling the setCurrent fuction you pass the following state
 
 useEffect
 useEffect(function that returns what to be done after a change,[array of what changes])
+
+this in js
+if used in a function it refs the object calling it
+
+
+bind
+you can add an object to a function and assign it to a variable that will be called as a function
+function message(){
+  return this.face
+}
+const Jack={face:"<>"}
+const Show=message.bind(Jack)
+console.log(show())
